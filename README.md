@@ -114,6 +114,7 @@ Pengujian fitur CRUD (Create, Read, Update, Delete) pada User Service dilakukan 
 Image aplikasi backend telah berhasil dibuat menggunakan konfigurasi optimal, diberikan tag replika publik, dan diunggah ke registry resmi Docker Hub.
 
 ## Perintah Pembuatan Tag dan Push:
+
 docker tag docker-praktikum-backend:latest tresnaaa/docker-praktikum-backend:latest
 docker push tresnaaa/docker-praktikum-backend:latest
 
