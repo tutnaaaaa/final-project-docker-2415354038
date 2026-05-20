@@ -19,7 +19,8 @@ docker compose up -d --build
 ### Hasil Verifikasi Container & Network:
 Setelah menjalankan perintah di atas, status container diverifikasi menggunakan perintah docker ps dengan hasil sebagai berikut:
 
-![node.js beerhasil diaktifkan] img/nodejs.png
+![node.js berhasil diaktifkan](img/nodejs.png)
+
 - Container Backend (node-crud-app): Status Up dan berhasil melakukan port mapping ke 0.0.0.0:3000->3000/tcp.
 
 - Container Database (mysql-crud-db): Status Up dan berjalan pada port internal 3306.
@@ -47,7 +48,7 @@ Pengujian fitur CRUD (Create, Read, Update, Delete) pada User Service dilakukan 
 
 - Response (Awal/Kosong):
 
-![response GET] img/Get.png
+![response GET](img/Get.png)
 
 ### B. POST /users (Membuat User Baru)
 
@@ -70,7 +71,7 @@ Pengujian fitur CRUD (Create, Read, Update, Delete) pada User Service dilakukan 
   "email": "tresnawan@example.com"
 }
 
-![response POST] img/post.png
+![response POST](img/post.png)
 
 ### C. PUT /users/:id (Mengupdate Data User)
 
@@ -94,7 +95,7 @@ Pengujian fitur CRUD (Create, Read, Update, Delete) pada User Service dilakukan 
   "email": "tresnawan_baru@example.com"
 }
 
-![response PUT] img/post.png
+![response PUT](img/post.png)
 
 ### D. DELETE /users/:id (Menghapus User)
 - URL: http://localhost:3000/users/1
@@ -107,14 +108,13 @@ Pengujian fitur CRUD (Create, Read, Update, Delete) pada User Service dilakukan 
   "message": "User dengan ID 1 berhasil dihapus"
 }
 
-![response DELETE] img/delete.png
+![response DELETE](img/delete.png)
 
 ### 3. Pengujian Upload ke Docker Hub
 
 Image aplikasi backend telah berhasil dibuat menggunakan konfigurasi optimal, diberikan tag replika publik, dan diunggah ke registry resmi Docker Hub.
 
 ## Perintah Pembuatan Tag dan Push:
-
 docker tag docker-praktikum-backend:latest tresnaaa/docker-praktikum-backend:latest
 docker push tresnaaa/docker-praktikum-backend:latest
 
