@@ -13,8 +13,8 @@ Modul Praktikum 06 - Implementasi Multi-Container Application menggunakan Docker
 Aplikasi ini menggunakan arsitektur *multi-container* yang terdiri dari *service* aplikasi backend (Node.js + Express) dan *service* database (MySQL 8) yang diisolasi dalam satu Docker Network internal serta menggunakan Docker Volume untuk *persistence data*.
 
 ### Perintah Menjalankan Project:
-```bash```
-docker compose up -d --build
+
+```docker compose up -d --build```
 
 ### Hasil Verifikasi Container & Network:
 Setelah menjalankan perintah di atas, status container diverifikasi menggunakan perintah docker ps dengan hasil sebagai berikut:
@@ -110,18 +110,18 @@ Pengujian fitur CRUD (Create, Read, Update, Delete) pada User Service dilakukan 
 
 ![response DELETE](img/delete.png)
 
-### 3. Pengujian Upload ke Docker Hub
+## 3. Pengujian Upload ke Docker Hub
 
 Image aplikasi backend telah berhasil dibuat menggunakan konfigurasi optimal, diberikan tag replika publik, dan diunggah ke registry resmi Docker Hub.
 
-## Perintah Pembuatan Tag dan Push:
+### Perintah Pembuatan Tag dan Push:
 docker tag docker-praktikum-backend:latest tresnaaa/docker-praktikum-backend:latest
 docker push tresnaaa/docker-praktikum-backend:latest
 
-### 4. Pengujian komparasi ukuran (size) image
+## 4. Pengujian komparasi ukuran (size) image
 pengujian komparasi ukuran (size) image menggunakan perintah docker images.
 
-## Hasil Komparasi Ukuran Image:
+### Hasil Komparasi Ukuran Image:
 - Image Standar Tanpa Optimasi (app-bad): ~1.57 GB
 
 - Image Optimized (app-good / Alpine Linux): ~206 MB
